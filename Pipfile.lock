@@ -256,7 +256,7 @@
             "index": "pypi",
             "version": "==1.1.1"
         },
-        "install": {
+        "pip-install": {
             "hashes": [
                 "sha256:1455304a2475b6753a9b0c28243ca7d8b7d71aeea1a88e6de94034fc57d765a0",
                 "sha256:dfec614e0cc90f00659067a078bc2ec032d9f0758f3df230c073eeaffd0cefa1"
