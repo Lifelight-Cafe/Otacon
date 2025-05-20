@@ -6,7 +6,7 @@ verify_ssl = true
 [packages]
 requests = ">=2.25.0"
 pipenv = "*"
-pip-install = "*"
+pip-install = ">=1.3.5"
 python-dotenv = ">=0.15.0"
 async-timeout = ">=3.0.1"
 nest_asyncio = "*"
