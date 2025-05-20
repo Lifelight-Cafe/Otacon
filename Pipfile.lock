@@ -262,7 +262,7 @@
                 "sha256:dfec614e0cc90f00659067a078bc2ec032d9f0758f3df230c073eeaffd0cefa1"
             ],
             "index": "pypi",
-            "version": "==1.3.4"
+            "version": "==1.3.5"
         },
         "kiwisolver": {
             "hashes": [
