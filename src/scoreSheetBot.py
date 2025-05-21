@@ -565,15 +565,18 @@ class ScoreSheetBot(commands.Cog):
 async def main():
     load_dotenv()
     token = os.getenv('DISCORD_TOKEN')
+    bot_activity = discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
+    await client.change_presence(activity=bot_activity)
     bot = commands.Bot(command_prefix=os.getenv('PREFIX'), intents=discord.Intents.all(), case_insensitive=True,
                        allowed_mentions=discord.AllowedMentions(everyone=False))
+
+        
     async with bot:
         bot.remove_command('help')
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token)
 
-    bot_activity = discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
-    await bot.change_presence(activity=bot_activity)
+    
 
 
 if __name__ == '__main__':
