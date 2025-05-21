@@ -576,8 +576,11 @@ async def main():
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token)
 
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> parent of 5b21047 (Update scoreSheetBot.py with competing bot activity)
 
 if __name__ == '__main__':
     main()
