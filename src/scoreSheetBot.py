@@ -58,7 +58,7 @@ class ScoreSheetBot(commands.Cog):
                     cmds_desc += ('{} - {}'.format(y.name, y.help) + '\n')
             halp.add_field(name='Help Commands', value=cmds_desc[0:len(cmds_desc) - 1], inline=False)
             if not isinstance(ctx.channel, discord.channel.DMChannel):
-                await ctx.message.add_reaction(emoji='✉')
+                await ctx.message.add_reaction(DM)
             await ctx.message.author.send(embed=halp)
         else:
             if len(group) > 1:
