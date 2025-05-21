@@ -577,8 +577,11 @@ async def main():
         await bot.start(token)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 
+=======
+>>>>>>> parent of 5b21047 (Update scoreSheetBot.py with competing bot activity)
 =======
 >>>>>>> parent of 5b21047 (Update scoreSheetBot.py with competing bot activity)
 
