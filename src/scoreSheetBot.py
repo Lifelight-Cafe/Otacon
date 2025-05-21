@@ -471,7 +471,7 @@ class ScoreSheetBot(commands.Cog):
 
     @commands.command(**help_doc['credits'])
     @commands.cooldown(1, 30, commands.BucketType.user)
-    async def thank(self, ctx: Context):
+    async def credits(self, ctx: Context):
 
         await ctx.send(f'Original [JustScoreSheetBot](https://github.com/JettJengaGod/JustScoreSheetBot) by Alex Jett.\n'
                        f'Current iteration by superhylia for Lifelight Café & Steamy League.')
