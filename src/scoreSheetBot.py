@@ -572,6 +572,9 @@ async def main():
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token)
 
+    bot_activity = discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
+    await bot.change_presence(activity=bot_activity)
+
 
 if __name__ == '__main__':
     main()
