@@ -455,19 +455,26 @@ class ScoreSheetBot(commands.Cog):
 
     @commands.command(**help_doc['stagelist'])
     async def stagelist(self, ctx: Context):
-        await ctx.send('https://cdn.discordapp.com/attachments/760303456757350400/815364853291286628/stagelist-1.png')
+        await ctx.send('https://lflt.cc/CBStagelist')
 
     @commands.command(**help_doc['invite'])
     async def invite(self, ctx: Context):
-        await ctx.send('https://smashcrewserver.com')
+        await ctx.send('https://discord.gg/499qKPPBcp or https://discord.gg/RGWhuzvNJP')
 
     @commands.command(**help_doc['thank'])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def thank(self, ctx: Context):
 
         await ctx.send(f'Thanks for all the hard work you do on the bot alexjett!\n'
-                       f'(If you want to thank him with money you can do so here. '
+                       f'(If you want to thank him with money, you can do so here. '
                        f'https://www.buymeacoffee.com/alexjett)')
+
+    @commands.command(**help_doc['credits'])
+    @commands.cooldown(1, 30, commands.BucketType.user)
+    async def thank(self, ctx: Context):
+
+        await ctx.send(f'Original [JustScoreSheetBot](https://github.com/JettJengaGod/JustScoreSheetBot) by Alex Jett.\n'
+                       f'Current iteration by superhylia for Lifelight Café & Steamy League.')
 
     @commands.command(**help_doc['coin'])
     async def coin(self, ctx: Context, member: discord.Member = None):
@@ -475,7 +482,7 @@ class ScoreSheetBot(commands.Cog):
         flip = bool(random.getrandbits(1))
         if member:
             msg = await ctx.send(f'{ctx.author.display_name} has asked you to call a coin {member.mention} '
-                                 f'what do you choose'
+                                 f'what do you choose?'
                                  f'({YES} for heads {NO} for tails?)')
             choice = await wait_for_reaction_on_message(YES, NO, msg, member, self.bot, 60)
             choice_name = 'heads' if choice else 'tails'
@@ -483,12 +490,12 @@ class ScoreSheetBot(commands.Cog):
                 await ctx.send(f'{member.display_name} chose {choice_name} and won the flip!')
             else:
                 await ctx.send(f'{member.display_name} chose {choice_name} and lost the flip!')
-        res = 'heads' if flip else 'tails'
-        await ctx.send(f'Your coin flip landed on {res}', file=discord.File(f'img/{res}.png'))
+        res = 'heads. 🔼' if flip else 'tails. 🔽'
+        await ctx.send(f'Your coin flip landed on {res}')
 
     @commands.command(**help_doc['guide'])
     async def guide(self, ctx):
-        await ctx.send('INSERT GUIDE HERE')
+        await ctx.send('https://lflt.cc/CrewBotGuide')
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx: Context, error):
