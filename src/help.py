@@ -53,6 +53,7 @@ help_doc = dict(
     use_ext=HelpDoc(Categories.cb, 'Uses your teams time extension in a crew battle'),
     ext=HelpDoc(Categories.cb, 'Prints out extension status'),
     countdown=HelpDoc(Categories.cb, 'Counts down for x seconds (defaults to 3).'),
+    credits=HelpDoc(Categories.misc, 'Lists credits for the bot.')
     thank=HelpDoc(Categories.misc, 'Thanks alexjett'),
     stagelist=HelpDoc(Categories.misc, 'Returns the stagelist'),
     invite=HelpDoc(Categories.misc, 'Returns the server invite'),
