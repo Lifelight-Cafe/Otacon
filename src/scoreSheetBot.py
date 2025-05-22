@@ -566,9 +566,10 @@ async def main():
     token = os.getenv('DISCORD_TOKEN')
     bot = commands.Bot(command_prefix=os.getenv('PREFIX'), intents=discord.Intents.all(), case_insensitive=True,
                        allowed_mentions=discord.AllowedMentions(everyone=False))
-    bot_activity = discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
+    
     
     async with bot:
+        bot_activity = discord.Activity(type=discord.ActivityType.watching, name="Steamy League!")
         bot.remove_command('help')
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.change_presence(activity=bot_activity)
