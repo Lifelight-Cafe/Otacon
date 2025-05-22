@@ -572,7 +572,7 @@ async def main():
         bot_activity = discord.Activity(type=discord.ActivityType.watching, name="Steamy League!")
         bot.remove_command('help')
         await bot.add_cog(ScoreSheetBot(bot))
-        await bot.change_presence(activity=bot_activity)
+        await self.change_presence(activity=bot_activity)
         await bot.start(token) 
 
 
