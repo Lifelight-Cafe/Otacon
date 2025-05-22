@@ -571,6 +571,7 @@ async def main():
     
     @bot.event
     async def on_ready():
+        printf(f'Logged in as {bot.user} with ID {bot.user.id})')
         await fetch_application_emojis(bot)
         await bot.add_cog(ScoreSheetBot(bot))
         await self.change_presence(activity=bot_activity)
