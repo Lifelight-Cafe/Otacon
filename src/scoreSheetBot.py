@@ -17,7 +17,6 @@ logging.basicConfig(level=logging.INFO)
 
 Context = discord.ext.commands.Context
 
-
 class ScoreSheetBot(commands.Cog):
     def __init__(self, bot: commands.bot):
         self.bot = bot
@@ -567,13 +566,13 @@ async def main():
     token = os.getenv('DISCORD_TOKEN')
     bot = commands.Bot(command_prefix=os.getenv('PREFIX'), intents=discord.Intents.all(), case_insensitive=True,
                        allowed_mentions=discord.AllowedMentions(everyone=False))
+    bot_activity = discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
+    
     async with bot:
         bot.remove_command('help')
         await bot.add_cog(ScoreSheetBot(bot))
-        await bot.start(token)
-
-    bot_activity = discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
-    await bot.change_presence(activity=bot_activity)
+        await bot.change_presence(activity=bot_activity)
+        await bot.start(token) 
 
 
 if __name__ == '__main__':
