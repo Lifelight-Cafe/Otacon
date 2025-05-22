@@ -578,7 +578,7 @@ async def main():
     async with bot:
         bot.remove_command('help')
         app_emojis = bot.fetch_application_emojis
-        bot.app_emojis = {e.name: e for e in emojis}
+        bot.app_emojis = {e.name: e for e in app_emojis}
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token) 
 
