@@ -566,14 +566,17 @@ async def main():
     token = os.getenv('DISCORD_TOKEN')
     bot = commands.Bot(command_prefix=os.getenv('PREFIX'), intents=discord.Intents.all(), case_insensitive=True,
                        allowed_mentions=discord.AllowedMentions(everyone=False))
+    bot_activity = discord.Activity(type=discord.ActivityType.watching, name="Steamy League!")
+    bot.remove_command('help')
     
-    
-    async with bot:
-        bot_activity = discord.Activity(type=discord.ActivityType.watching, name="Steamy League!")
-        bot.remove_command('help')
+    @bot.event
+    async def on_ready():
+        printf(f'Logged in as {bot.user} with ID {bot.user.id})')
+        await fetch_application_emojis(bot)
         await bot.add_cog(ScoreSheetBot(bot))
         await self.change_presence(activity=bot_activity)
-        await bot.start(token) 
+        
+    await bot.start(token) 
 
 
 if __name__ == '__main__':
