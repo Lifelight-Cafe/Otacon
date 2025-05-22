@@ -475,6 +475,12 @@ class ScoreSheetBot(commands.Cog):
         await ctx.send(f'Original [JustScoreSheetBot](https://github.com/JettJengaGod/JustScoreSheetBot) by Alex Jett.\n'
                        f'Current iteration by superhylia for Lifelight Café & Steamy League.')
 
+    @commands.command(**help_doc['print_all_emojis'])
+    @commands.cooldown(1, 30, commands.BucketType.user)
+    async def print_all_emojis(self, ctx: Context):
+        all_app_emojis = await fetch_application_emojis(1374272894019829822)
+        await ctx.send(' {all_app_emojis} ')
+
     @commands.command(**help_doc['coin'])
     async def coin(self, ctx: Context, member: discord.Member = None):
 
