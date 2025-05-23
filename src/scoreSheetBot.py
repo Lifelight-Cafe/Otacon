@@ -571,13 +571,18 @@ class ScoreSheetBot(commands.Cog):
 async def main():
     load_dotenv()
     token = os.getenv('DISCORD_TOKEN')
-    bot = commands.Bot(command_prefix=os.getenv('PREFIX'), intents=discord.Intents.all(), case_insensitive=True,
-                       allowed_mentions=discord.AllowedMentions(everyone=False), activity = discord.Activity(type=discord.ActivityType.watching, name="Steamy League!"))
+    bot = commands.Bot(
+        command_prefix=os.getenv('PREFIX'), 
+        intents=discord.Intents.all(), 
+        case_insensitive=True,
+        allowed_mentions=discord.AllowedMentions(everyone=False), 
+        activity=discord.Activity(type=discord.ActivityType.watching, name="Steamy League!")
+    )
     
     
     async with bot:
         bot.remove_command('help')
-        app_emojis = bot.fetch_application_emojis
+        app_emojis = await bot.fetch_application_emojis()
         bot.app_emojis = {e.name: e for e in app_emojis}
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token) 
