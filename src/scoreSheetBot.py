@@ -576,7 +576,7 @@ async def main():
         intents=discord.Intents.all(), 
         case_insensitive=True,
         allowed_mentions=discord.AllowedMentions(everyone=False), 
-        activity=discord.Activity(type=discord.ActivityType.watching, name="Steamy League!")
+        activity=discord.Activity(type=discord.ActivityType.competing, name="in Steamy League!")
     )
     
     
