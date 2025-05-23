@@ -9,4 +9,4 @@ sys.path.append(_project_path)
 from src.scoreSheetBot import main
 
 # nest_asyncio.apply()
-asyncio.run(main(bot))
+asyncio.run(main())
