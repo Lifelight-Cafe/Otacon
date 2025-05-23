@@ -568,7 +568,7 @@ class ScoreSheetBot(commands.Cog):
             lf.close()
 
 
-async def main(self):
+async def main():
     load_dotenv()
     token = os.getenv('DISCORD_TOKEN')
     bot = commands.Bot(
