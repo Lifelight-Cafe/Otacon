@@ -23,6 +23,7 @@ class ScoreSheetBot(commands.Cog):
         self.battle_map: Dict[str, Battle] = {}
         self.cache_time = time.time()
         self._gambit_message = None
+        self.app_emojis: Dict[str, discord.Emoji] = {}
 
     def _current(self, ctx) -> Battle:
         if key_string(ctx) in self.battle_map:
@@ -565,3 +566,22 @@ class ScoreSheetBot(commands.Cog):
             traceback.print_exception(type(error), error, error.__traceback__, file=lf)
             traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
             lf.close()
+
+
+async def main():
+    load_dotenv()
+    token = os.getenv('DISCORD_TOKEN')
+    bot = commands.Bot(command_prefix=os.getenv('PREFIX'), intents=discord.Intents.all(), case_insensitive=True,
+                       allowed_mentions=discord.AllowedMentions(everyone=False), activity = discord.Activity(type=discord.ActivityType.watching, name="Steamy League!"))
+    
+    
+    async with bot:
+        bot.remove_command('help')
+        app_emojis = bot.fetch_application_emojis
+        bot.app_emojis = {e.name: e for e in app_emojis}
+        await bot.add_cog(ScoreSheetBot(bot))
+        await bot.start(token) 
+
+
+if __name__ == '__main__':
+    main()
