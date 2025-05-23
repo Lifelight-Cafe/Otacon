@@ -577,8 +577,9 @@ async def main():
         case_insensitive=True,
         allowed_mentions=discord.AllowedMentions(everyone=False), 
         activity=discord.Activity(type=discord.ActivityType.competing, name="Steamy League!")
+        app_emojis = await self.fetch_application_emojis(1374272894019829822)
+        bot.app_emojis = {e.name: e for e in app_emojis}
     )
-    
     
     async with bot:
         bot.remove_command('help')
