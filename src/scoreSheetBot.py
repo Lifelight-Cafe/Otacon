@@ -576,8 +576,8 @@ async def main():
         intents=discord.Intents.all(), 
         case_insensitive=True,
         allowed_mentions=discord.AllowedMentions(everyone=False), 
-        activity=discord.Activity(type=discord.ActivityType.competing, name="Steamy League!")
-        app_emojis = await self.fetch_application_emojis(1374272894019829822)
+        activity=discord.Activity(type=discord.ActivityType.competing, name="Steamy League!"),
+        app_emojis = await self.fetch_application_emojis(1374272894019829822),
         bot.app_emojis = {e.name: e for e in app_emojis}
     )
     
