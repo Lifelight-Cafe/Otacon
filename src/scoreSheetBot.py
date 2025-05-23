@@ -582,11 +582,5 @@ async def main():
     
     async with bot:
         bot.remove_command('help')
-        app_emojis = await fetch_application_emojis(1370269207383769130)
-        bot.app_emojis = {e.name: e for e in app_emojis}
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token) 
-
-
-if __name__ == '__main__':
-    main()
