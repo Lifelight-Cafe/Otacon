@@ -565,7 +565,7 @@ class ScoreSheetBot(commands.Cog):
             traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
             lf.close()
 
-class Intro(commands.Bot)
+class Intro(commands.Bot):
     def __init__(self):
             self.app_emojis: Dict[str, discord.Emoji] = {}
     async def setup_hook(self):
