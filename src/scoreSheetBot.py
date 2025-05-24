@@ -23,6 +23,11 @@ class ScoreSheetBot(commands.Cog):
         self.battle_map: Dict[str, Battle] = {}
         self.cache_time = time.time()
         self._gambit_message = None
+        self.app_emojis: Dict[str, discord.Emoji] = {}
+
+    async def setup_hook(self):
+        app_emojis = self.fetch_application_emojis()
+        self.app_emojis = {e.name: e for e in app_emojis}
     
     def _current(self, ctx) -> Battle:
         if key_string(ctx) in self.battle_map:
@@ -565,12 +570,6 @@ class ScoreSheetBot(commands.Cog):
             traceback.print_exception(type(error), error, error.__traceback__, file=sys.stderr)
             lf.close()
 
-class Intro(commands.Bot)
-    def __init__(self):
-            self.app_emojis: Dict[str, discord.Emoji] = {}
-    async def setup_hook(self):
-        app_emojis = self.fetch_application_emojis()
-        self.app_emojis = {e.name: e for e in app_emojis}
 
 async def main():
     load_dotenv()
@@ -585,6 +584,5 @@ async def main():
     
     async with bot:
         bot.remove_command('help')
-        await bot.add_cog(Intro(bot))
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token) 
