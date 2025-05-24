@@ -581,5 +581,6 @@ async def main():
     
     async with bot:
         bot.remove_command('help')
+        app_emojis = await bot.fetch_application_emojis()
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token) 
