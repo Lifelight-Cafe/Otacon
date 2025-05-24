@@ -99,7 +99,7 @@ class ScoreSheetBot(commands.Cog):
                                          color=discord.Color.red())
                 else:
                     if not isinstance(ctx.channel, discord.channel.DMChannel):
-                        await ctx.message.add_reaction(emoji='✉')
+                        await ctx.message.add_reaction(emoji='DM')
                 await ctx.message.author.send('', embed=halp)
 
     ''' **********************************CB COMMANDS ******************************************'''
@@ -483,7 +483,7 @@ class ScoreSheetBot(commands.Cog):
     @commands.command(**help_doc['print_all_emojis'])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def print_all_emojis(self, ctx: Context):
-        await ctx.send(f' {self.app_emojis.get("sonic")} ')
+        await ctx.send(f' {self.app_emojis.get(":sonic:")} ')
 
     @commands.command(**help_doc['coin'])
     async def coin(self, ctx: Context, member: discord.Member = None):
