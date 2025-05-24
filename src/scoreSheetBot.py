@@ -585,6 +585,6 @@ async def main():
     
     async with bot:
         bot.remove_command('help')
-        await bot.add_cog(Intro())
+        await bot.add_cog(Intro(bot))
         await bot.add_cog(ScoreSheetBot(bot))
         await bot.start(token) 
