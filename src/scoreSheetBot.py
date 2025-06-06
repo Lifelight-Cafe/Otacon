@@ -78,7 +78,7 @@ class ScoreSheetBot(commands.Cog):
                             if isinstance(cmd, discord.ext.commands.Group) and not cmd.hidden:
                                 cmds = []
                                 halp = discord.Embed(title=group[0] + ':Commands',
-                                                     description=cmd.brief + 'Required inputs are signified (LikeThis). Optional inputs are signified [LikeThis].)
+                                                     description=cmd.brief + 'Required inputs are signified (LikeThis). Optional inputs are signified [LikeThis].')
                                 for c in self.bot.walk_commands():
                                     if c.help == cmd.name:
                                         if staff or not c.hidden:
