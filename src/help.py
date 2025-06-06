@@ -4,15 +4,15 @@ class Categories:
 
 
 class HelpDoc(dict):
-    def __init__(self, help_txt, brief: str, description='', usage='', example=''):
+    def __init__(self, help_txt, brief: str, usage='', example='', alias=''):
         if not description:
             description = self.descriptify(brief)
         super().__init__(
             help=help_txt,
             brief=brief,
-            description=description,
             usage=usage,
-            example=example
+            example=example,
+            alias=alias
         )
 
     def descriptify(self, s):
