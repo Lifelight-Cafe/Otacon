@@ -49,7 +49,7 @@ class ScoreSheetBot(commands.Cog):
         """Gets all categories and commands of mine."""
         staff = False  # check_roles(main_user, STAFF_LIST)
         if not group:
-            halp = discord.Embed(title='Group Listing and Uncategorized Commands',
+            halp = discord.Embed(title='Commands',
                                  description=f'Use `{self.bot.command_prefix}help *group*` to find out more about them!')
             groups_desc = ''
             for cmd in self.bot.walk_commands():
@@ -77,8 +77,8 @@ class ScoreSheetBot(commands.Cog):
                         if cmd.name == grp:
                             if isinstance(cmd, discord.ext.commands.Group) and not cmd.hidden:
                                 cmds = []
-                                halp = discord.Embed(title=group[0] + ' Command Listing',
-                                                     description=cmd.brief)
+                                halp = discord.Embed(title=group[0] + ':Commands',
+                                                     description=cmd.brief + 'Required inputs are signified (LikeThis). Optional inputs are signified [LikeThis].)
                                 for c in self.bot.walk_commands():
                                     if c.help == cmd.name:
                                         if staff or not c.hidden:
@@ -90,7 +90,8 @@ class ScoreSheetBot(commands.Cog):
                                 if staff or not cmd.hidden:
                                     halp = discord.Embed(title=group[0],
                                                          description=f'{cmd.description}\n'
-                                                                     f'{self.bot.command_prefix}{cmd.name} {cmd.usage}')
+                                                                     f'{cmd.usage}\n'
+                                                                     f'{cmd.example}\n')
                                 else:
                                     await ctx.author.send('That command is hidden.')
                             found = True
@@ -104,7 +105,7 @@ class ScoreSheetBot(commands.Cog):
 
     ''' **********************************CB COMMANDS ******************************************'''
 
-    @commands.group(name='cb', brief='Commands for running a crew battle', invoke_without_command=True)
+    @commands.group(name='cb', brief='Commands for running crew battles.', invoke_without_command=True)
     async def cb(self, ctx):
         await self.help(ctx, 'cb')
 
