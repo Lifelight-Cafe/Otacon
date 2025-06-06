@@ -12,7 +12,7 @@ class HelpDoc(dict):
             brief=brief,
             description=description,
             usage=usage,
-            example=example,
+            example=example
         )
 
     def descriptify(self, s):
@@ -49,11 +49,11 @@ help_doc = dict(
                 '**Usage:** undo', 
                 '**Example:** undo'),
     timerstock=HelpDoc(Categories.cb, 
-                'Lose a stock on your team's side due to timing out if you've been sent in: otherwise, if a team is specified, the last player on the selected team will lose a stock due to the timer.''',
+                'Lose a stock on your team\'s side due to timing out if you\'ve been sent in: otherwise, if a team is specified, the last player on the selected team will lose a stock due to the timer.',
                 '**Usage:** timerstock [TeamName]',
                 '**Example:** timerstock TeamThea'),
     forfeit=HelpDoc(Categories.cb,
-                'Forfeit the crew battle on your team's behalf if you've been sent in: otherwise, if a team is specified, the selected team will forfeit the crew battle.''',
+                'Forfeit the crew battle on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will forfeit the crew battle.',
                 '**Usage:** forfeit [TeamName]',
                 '**Example:** forfeit TeamCapulus'),
     status=HelpDoc(Categories.cb, 
@@ -73,7 +73,7 @@ help_doc = dict(
                 '**Usage:** confirm',
                 '**Example:** confirm'),
     char=HelpDoc(Categories.cb, 
-                'Prints the character's corresponding emojis. This is a good way to test what emoji will be used on the scoresheet with the `end` command.''',
+                'Prints the character\'s corresponding emojis. This is a good way to test what emoji will be used on the scoresheet with the `end` command.',
                 '**Usage:** char (Char1)[AltNum]',
                  '**Example:** char Sephiroth7'),
     arena=HelpDoc(Categories.cb, 
@@ -97,7 +97,7 @@ help_doc = dict(
                  '**Usage:** coin [@User]',
                  '**Example:** coin @superhylia'),
     use_ext=HelpDoc(Categories.cb,
-                'Use the extension period to send in the next player on your team's behalf if you've been sent in: otherwise, if a team is specified, the selected team will use the extension period.''',
+                'Use the extension period to send in the next player on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will use the extension period.',
                 '**Usage:** use_ext [TeamName]',
                 '**Example:** use_ext TeamAqua'),
     ext=HelpDoc(Categories.cb, 
