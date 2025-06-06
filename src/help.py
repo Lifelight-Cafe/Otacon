@@ -4,13 +4,12 @@ class Categories:
 
 
 class HelpDoc(dict):
-    def __init__(self, help_txt, brief: str, usage='', example='', alias=''):
+    def __init__(self, help_txt, brief: str, usage='', example=''):
         super().__init__(
             help=help_txt,
             brief=brief,
             usage=usage,
-            example=example,
-            alias=alias
+            example=example
         )
 
     def descriptify(self, s):
