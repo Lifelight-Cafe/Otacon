@@ -91,7 +91,7 @@ class ScoreSheetBot(commands.Cog):
                                     halp = discord.Embed(title=group[0],
                                                          description=f'{cmd.brief}\n'
                                                                      f'{cmd.usage}\n'
-                                                                     f'{cmd.example}\n')
+                                                                     f'testing this rq')
                                 else:
                                     await ctx.author.send('That command is hidden.')
                             found = True
