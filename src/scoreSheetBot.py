@@ -68,7 +68,7 @@ class ScoreSheetBot(commands.Cog):
             if len(group) > 1:
                 halp = discord.Embed(title='Error!', description='You can only send 1 group or command name!',
                                      color=discord.Color.red())
-                await ctx.message.author.send(embed=halp)
+                await ctx.send(embed=halp)
                 return
             else:
                 found = False
