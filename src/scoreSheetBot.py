@@ -89,8 +89,8 @@ class ScoreSheetBot(commands.Cog):
                             else:
                                 if staff or not cmd.hidden:
                                     halp = discord.Embed(title=group[0],
-                                                         description=f'{cmd.usage}\n'
-                                                                     f'{cmd.description}\n')
+                                                         description=f'```{cmd.usage}```\n'
+                                                                     f'{cmd.description}')
                                 else:
                                     await ctx.author.send('That command is hidden.')
                             found = True
