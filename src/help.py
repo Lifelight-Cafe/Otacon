@@ -21,38 +21,38 @@ help_doc = dict(
     battle=HelpDoc(
         help_txt=Categories.cb,
         brief='Start a Mock Scoresheet in this channel with two team names and the size of people per team. You can also ping the corresponding team role.',
-        description='\nStart a Mock Scoresheet in this channel with two team names and the size of people per team. You can also ping the corresponding team role.\n`battle TeamThea @Team Aqua 5`',
+        description='\nStart a Mock Scoresheet in this channel with two team names and the size of people per team. You can also ping the corresponding team role.\n\n__**Example**__: `battle TeamThea @Team Aqua 5`',
         usage='battle (Team1) (Team2) (Size)'
     ),
     send=HelpDoc(
         help_txt=Categories.cb,
         brief='Sends in the mentioned/selected player for the specified team.',
         usage='send (@Player) (TeamName)',
-        description='Sends in the mentioned/selected player for the specified team.\n`send @superhylia TeamCapulus`'
+        description='Sends in the mentioned/selected player for the specified team.\n\n__**Example**__: `send @superhylia TeamCapulus`'
     ),
     replace=HelpDoc(
         help_txt=Categories.cb,
         brief='Replaces current player with the mentioned/selected player.',
         usage='replace (@Player) (TeamName)',
-        description='Replaces current player with the mentioned/selected player.\n`replace Oracle TeamCapulus`'
+        description='Replaces current player with the mentioned/selected player.\n\n__**Example**__: `replace Oracle TeamCapulus`'
     ),
     end=HelpDoc(
         help_txt=Categories.cb,
         brief='End the game with characters and stocks for both teams.',
         usage='end (Char1)[AltNum] (StocksTaken1) (Char2)[AltNum] (StocksTaken2)',
-        description='End the game with characters and stocks for both teams.\n`end Mario4 3 DK2 1`'
+        description='End the game with characters and stocks for both teams.\n\n__**Example**__: `end Mario4 3 DK2 1`'
     ),
     endlag=HelpDoc(
         help_txt=Categories.cb,
         brief='Prematurely end the game with characters and stocks for both teams due to lag or disconnection.',
         usage='endlag (Char1)[AltNum] (StocksTaken1) (Char2)[AltNum] (StocksTaken2)',
-        description='Prematurely end the game with characters and stocks for both teams due to lag or disconnection.\n`endlag Mario4 3 DK2 1`'
+        description='Prematurely end the game with characters and stocks for both teams due to lag or disconnection.\n\n__**Example**__: `endlag Mario4 3 DK2 1`'
     ),
     resize=HelpDoc(
         help_txt=Categories.cb,
         brief='Resize the size of players per team of the crew battle.',
         usage='resize (Size)',
-        description='Resize the size of players per team of the crew battle.\n`resize 3`'
+        description='Resize the size of players per team of the crew battle.\n\n__**Example**__: `resize 3`'
     ),
     undo=HelpDoc(
         help_txt=Categories.cb,
@@ -64,13 +64,13 @@ help_doc = dict(
         help_txt=Categories.cb,
         brief='Lose a stock on your team\'s or the selected team\'s side due to timing out',
         usage='timerstock [TeamName]',
-        description='Lose a stock on your team\'s side due to timing out if you\'ve been sent in: otherwise, if a team is specified, the last player on the selected team will lose a stock due to the timer.\n`timerstock TeamThea`'
+        description='Lose a stock on your team\'s side due to timing out if you\'ve been sent in: otherwise, if a team is specified, the last player on the selected team will lose a stock due to the timer.\n\n__**Example**__: `timerstock TeamThea`'
     ),
     forfeit=HelpDoc(
         help_txt=Categories.cb,
         brief='Forfeit the crew battle on your team\'s or the selected team\'s behalf.',
         usage='forfeit [TeamName]',
-        description='Forfeit the crew battle on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will forfeit the crew battle.\n`forfeit TeamCapulus`'
+        description='Forfeit the crew battle on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will forfeit the crew battle.\n\n__**Example**__: `forfeit TeamCapulus`'
     ),
     status=HelpDoc(
         help_txt=Categories.cb,
@@ -100,19 +100,19 @@ help_doc = dict(
         help_txt=Categories.cb,
         brief='Prints the character\'s corresponding emojis.',
         usage='char (Char1)[AltNum]',
-        description='Prints the character\'s corresponding emojis. This is a good way to test what emoji will be used on the scoresheet with the `end` command.\n`char Sephiroth7`'
+        description='Prints the character\'s corresponding emojis. This is a good way to test what emoji will be used on the scoresheet with the `end` command.\n\n__**Example**__: `char Sephiroth7`'
     ),
     arena=HelpDoc(
         help_txt=Categories.cb,
         brief='Prints the arena information: if the arena ID/pass is specified, the arena will be set.',
         usage='arena [ID/Pass]',
-        description='Prints the arena information: if the arena ID/pass is specified, the arena will be set.\n`arena LFLTC/2020`'
+        description='Prints the arena information: if the arena ID/pass is specified, the arena will be set.\n\n__**Example**__: `arena LFLTC/2020`'
     ),
     stream=HelpDoc(
         help_txt=Categories.cb,
         brief='Prints the stream information: if the streamlink is specified, the stream will be set.',
         usage='stream [StreamLink]',
-        description='Prints the stream information: if the streamlink is specified, the stream will be set.\n`stream https://twitch.tv/LifelightCafe`'
+        description='Prints the stream information: if the streamlink is specified, the stream will be set.\n\n__**Example**__: `stream https://twitch.tv/LifelightCafe`'
     ),
     timer=HelpDoc(
         help_txt=Categories.cb,
@@ -130,13 +130,13 @@ help_doc = dict(
         help_txt=Categories.misc,
         brief='Flips a coin: if a user is mentioned, it will ask them to choose heads or tails.',
         usage='coin [@User]',
-        description='Flips a coin: if a user is mentioned, it will ask them to choose heads or tails.\n`coin @superhylia`'
+        description='Flips a coin: if a user is mentioned, it will ask them to choose heads or tails.\n\n__**Example**__: `coin @superhylia`'
     ),
     use_ext=HelpDoc(
         help_txt=Categories.cb,
-        brief='Use the extension period to send in the next player on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will use the extension period.',
+        brief='Use the extension period to send in the next player on your team\'s or the selected team\'s behalf.',
         usage='use_ext [TeamName]',
-        description='Use the extension period to send in the next player on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will use the extension period.\n`use_ext TeamAqua`'
+        description='Use the extension period to send in the next player on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will use the extension period.\n\n__**Example**__: `use_ext TeamAqua`'
     ),
     ext=HelpDoc(
         help_txt=Categories.cb,
@@ -148,7 +148,7 @@ help_doc = dict(
         help_txt=Categories.cb,
         brief='Counts down for 3 seconds: if a time is specified, it will count down from that time in seconds.',
         usage='countdown [Time]',
-        description='Prints whether or not either team has used their extension period.\n`countdown 10`'
+        description='Prints whether or not either team has used their extension period.\n\n__**Example**__: `countdown 10`'
     ),
     credits=HelpDoc(
         help_txt=Categories.misc,
