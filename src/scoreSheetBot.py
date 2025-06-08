@@ -89,7 +89,7 @@ class ScoreSheetBot(commands.Cog):
                             else:
                                 if staff or not cmd.hidden:
                                     halp = discord.Embed(title=group[0],
-                                                         description=f'{cmd.brief}\n'
+                                                         description=f'{cmd.description}\n'
                                                                      f'{cmd.usage}\n'
                                                                      f'{cmd.example}')
                                 else:
