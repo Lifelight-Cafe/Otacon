@@ -21,9 +21,10 @@ class HelpDoc(dict):
 
 help_doc = dict(
     battle=HelpDoc(Categories.cb, 
-                'Start a Mock Scoresheet in this channel with two team names and the size of people per team. You can also ping the corresponding team role.',
-                '**Usage:** battle (Team1) (Team2) (Size)', 
-                '**Example:** battle TeamThea @Team Aqua 5'),
+                brief='Start a Mock Scoresheet in this channel with two team names and the size of people per team. You can also ping the corresponding team role.',
+                description='',
+                usage='**Usage:** battle (Team1) (Team2) (Size)', 
+                example='**Example:** battle TeamThea @Team Aqua 5'),
     send=HelpDoc(Categories.cb, 
                 'Sends in the mentioned/selected player for the specified team.',
                 '**Usage:** send (@Player) (TeamName)', 
