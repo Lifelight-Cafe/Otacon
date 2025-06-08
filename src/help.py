@@ -22,6 +22,7 @@ help_doc = dict(
     battle=HelpDoc(
         help_txt=Categories.cb,
         brief='Start a Mock Scoresheet in this channel with two team names and the size of people per team. You can also ping the corresponding team role.',
+        description='',
         usage='**Usage:** `battle (Team1) (Team2) (Size)`',
         example='**Example:** `battle TeamThea @Team Aqua 5`'
     ),
