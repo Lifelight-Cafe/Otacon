@@ -97,9 +97,6 @@ class ScoreSheetBot(commands.Cog):
                 if not found:
                     halp = discord.Embed(title='Error!', description=f'Command {group} not found.',
                                          color=discord.Color.red())
-                else:
-                    if not isinstance(ctx.channel, discord.channel.DMChannel):
-                        await ctx.message.add_reaction(emoji='DM')
                 await ctx.message.author.send('', embed=halp)
 
     ''' **********************************CB COMMANDS ******************************************'''
