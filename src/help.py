@@ -94,7 +94,7 @@ help_doc = dict(
         help_txt=Categories.cb,
         brief='Confirm the final scoresheet is correct once the battle is over.',
         usage='**Usage:** `confirm`',
-        example='**Example:** `confirm`'
+        description='**Example:** `confirm`'
     ),
     char=HelpDoc(
         help_txt=Categories.cb,
