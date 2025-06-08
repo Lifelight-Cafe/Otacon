@@ -92,12 +92,12 @@ class ScoreSheetBot(commands.Cog):
                                                          description=f'```{cmd.usage}```\n'
                                                                      f'{cmd.description}')
                                 else:
-                                    await ctx.author.send('That command is hidden.')
+                                    await ctx.send('That command is hidden.')
                             found = True
                 if not found:
                     halp = discord.Embed(title='Error!', description=f'Command {group} not found.',
                                          color=discord.Color.red())
-                await ctx.message.author.send('', embed=halp)
+                await ctx.send('', embed=halp)
 
     ''' **********************************CB COMMANDS ******************************************'''
 
