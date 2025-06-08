@@ -57,48 +57,48 @@ help_doc = dict(
     undo=HelpDoc(
         help_txt=Categories.cb,
         brief='Undoes the last action taken by the bot.',
-        usage='',
-        description=''
+        usage='undo',
+        description='Undoes the last action taken by the bot. Please note that undoing a replace on the scoresheet doesn\'t actually undo the replace. You must use `,replace @Player` with the original player in order to do so.'
     ),
     timerstock=HelpDoc(
         help_txt=Categories.cb,
-        brief='Lose a stock on your team\'s side due to timing out if you\'ve been sent in: otherwise, if a team is specified, the last player on the selected team will lose a stock due to the timer.',
+        brief='Lose a stock on your team\'s or the selected team\'s side due to timing out',
         usage='timerstock [TeamName]',
         description='Lose a stock on your team\'s side due to timing out if you\'ve been sent in: otherwise, if a team is specified, the last player on the selected team will lose a stock due to the timer.\n`timerstock TeamThea`'
     ),
     forfeit=HelpDoc(
         help_txt=Categories.cb,
-        brief='Forfeit the crew battle on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will forfeit the crew battle.',
+        brief='Forfeit the crew battle on your team\'s or the selected team\'s behalf.',
         usage='forfeit [TeamName]',
         description='Forfeit the crew battle on your team\'s behalf if you\'ve been sent in: otherwise, if a team is specified, the selected team will forfeit the crew battle.\n`forfeit TeamCapulus`'
     ),
     status=HelpDoc(
         help_txt=Categories.cb,
         brief='Prints the current status of the crew battle with an overview of players, stocks taken, lobby ID, and stream.',
-        usage='',
-        description=''
+        usage='status',
+        description='Prints the current status of the crew battle with an overview of players, stocks taken, lobby ID, and stream.'
     ),
     chars=HelpDoc(
         help_txt=Categories.cb,
         brief='Prints all characters, their compatible nicknames, and all of their emojis via your DMs.',
-        usage='`',
+        usage='chars',
         description=''
     ),
     clear=HelpDoc(
         help_txt=Categories.cb,
         brief='Clears the current crew battle in the channel.',
-        usage='',
+        usage='clear',
         description=''
     ),
     confirm=HelpDoc(
         help_txt=Categories.cb,
         brief='Confirm the final scoresheet is correct once the battle is over.',
-        usage='',
+        usage='confirm',
         description=''
     ),
     char=HelpDoc(
         help_txt=Categories.cb,
-        brief='Prints the character\'s corresponding emojis. This is a good way to test what emoji will be used on the scoresheet with the `end` command.',
+        brief='Prints the character\'s corresponding emojis.',
         usage='char (Char1)[AltNum]',
         description='Prints the character\'s corresponding emojis. This is a good way to test what emoji will be used on the scoresheet with the `end` command.\n`char Sephiroth7`'
     ),
@@ -117,14 +117,14 @@ help_doc = dict(
     timer=HelpDoc(
         help_txt=Categories.cb,
         brief='Prints the time in minutes and seconds since the last match finished.',
-        usage='',
-        description=''
+        usage='timer',
+        description='Prints the time in minutes and seconds since the last match finished.'
     ),
     guide=HelpDoc(
         help_txt=Categories.misc,
         brief='Provides the link to the usage guide for the bot.',
-        usage='',
-        description=''
+        usage='guide',
+        description='https://lflt.cc/CrewBotGuide'
     ),
     coin=HelpDoc(
         help_txt=Categories.misc,
@@ -141,8 +141,8 @@ help_doc = dict(
     ext=HelpDoc(
         help_txt=Categories.cb,
         brief='Prints whether or not either team has used their extension period.',
-        usage='',
-        description=''
+        usage='ext',
+        description='Prints whether or not either team has used their extension period.'
     ),
     countdown=HelpDoc(
         help_txt=Categories.cb,
@@ -153,31 +153,31 @@ help_doc = dict(
     credits=HelpDoc(
         help_txt=Categories.misc,
         brief='Provides the credits for the bot.',
-        usage='',
-        description=''
+        usage='credits',
+        description='Provides the credits for the bot.'
     ),
     print_all_emojis=HelpDoc(
         help_txt=Categories.misc,
         brief='TEST.',
-        usage='',
-        description=''
+        usage='print_all_emojis',
+        description='Test command.'
     ),
     thank=HelpDoc(
         help_txt=Categories.misc,
         brief='Thanks the original bot developer, AlexJett!',
-        usage='',
-        description=''
+        usage='thank',
+        description='Thanks the original bot developer, AlexJett!'
     ),
     stagelist=HelpDoc(
         help_txt=Categories.misc,
         brief='Provides an image of the stagelist used in crew battles.',
-        usage='',
-        description=''
+        usage='stagelist',
+        description='**Starter stages:** Battlefield, Small Battlefield, Smashville, Pokémon Stadium 2, Town and City\n**Counterpick stages**: Hollow Bastion, Kalos Pokémon League, Final Destination\n1-2-1 starter ban format. 3 stage bans.'
     ),
     invite=HelpDoc(
         help_txt=Categories.misc,
         brief='Provides an invite to the Lifelight Café and Steamy League Discord servers.',
-        usage='',
-        description=''
+        usage='invite',
+        description='https://discord.gg/499qKPPBcp'
     ),
 )
