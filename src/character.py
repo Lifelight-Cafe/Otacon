@@ -5,7 +5,7 @@ CHARACTERS = {
     'banjo_and_kazooie': ['banjo', 'banjokazooie'],
     'bayonetta': ['bayo'],
     'bowser': [],
-    'bowser_jr': ['bjr', 'jr', 'larry', 'royk', 'wendy', 'iggy', 'morton', 'lemmy', 'ludwig'],
+    'bowser_jr': ['bjr', 'jr', 'larry', 'royjr', 'wendy', 'iggy', 'morton', 'lemmy', 'ludwig'],
     'byleth': [],
     'captain_falcon': ['falcon'],
     'chrom': [],
