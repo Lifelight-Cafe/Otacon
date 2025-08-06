@@ -505,7 +505,7 @@
                 "sha256:d180f5be4775c552fd5e69ae18a9d6099d9dafb462efe54f11c72cb5f4d5e977"
             ],
             "index": "pypi",
-            "version": "==2021.5.29"
+            "version": "==2024.4.1"
         },
         "pip-install": {
             "hashes": [
