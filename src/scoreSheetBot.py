@@ -501,7 +501,7 @@ class ScoreSheetBot(commands.Cog):
 
     @commands.command(**help_doc['guide'])
     async def guide(self, ctx):
-        await ctx.send('https://lflt.cc/CrewBotGuide')
+        await ctx.send('https://lflt.cc/otacon')
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx: Context, error):
