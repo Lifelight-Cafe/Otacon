@@ -482,7 +482,7 @@ class ScoreSheetBot(commands.Cog):
     async def print_all_emojis(self, ctx: Context):
         await ctx.send(f' {self.app_emojis.get(":sonic:")} ')
 
-    @commands.command(**help_doc['coin'])
+    @commands.command(**help_doc['coin'], aliases=['flip'])
     async def coin(self, ctx: Context, member: discord.Member = None):
 
         flip = bool(random.getrandbits(1))
