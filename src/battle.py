@@ -239,7 +239,7 @@ class Battle:
 
     def lookup(self, team_name: str) -> Team:
         for team in self.teams:
-            if team_name == team.name:
+            if team_name.lower() == team.name.lower():
                 return team
         raise StateError(self, f"Team \"{team_name}\" does not exist.")
 
